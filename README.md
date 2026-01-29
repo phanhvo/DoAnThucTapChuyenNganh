@@ -5,10 +5,10 @@
   Hệ thống hỗ trợ khách hàng tìm kiếm, đặt phòng, thanh toán trực tuyến và giúp quản trị viên quản lý phòng, khách hàng và doanh thu.
 
 ## Cấu trúc thư mục 
-hotel-fe/ # Frontend (ReactJS)
-hotel-be/ # Backend (NodeJS + Express)
-database/ # File SQL (MySQL)
-Mô hình MVC (Model - Controller - View)
+- hotel-fe/ Frontend (ReactJS)
+- hotel-be/ Backend (NodeJS + Express)
+- database/ File SQL (MySQL)
+- Mô hình MVC (Model - Controller - View)
 
 ## Hướng dẫn chạy nhanh
 Yêu cầu: NodeJS >= 16, MySQL
@@ -21,6 +21,7 @@ npm start
 cd hotel-fe
 npm install
 npm run dev
+```
 
 ## Tài liệu đồ án
 - Báo cáo đầy đủ: '/docs/BAOCAO_TTCN.pdf'

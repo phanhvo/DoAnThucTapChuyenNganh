@@ -24,7 +24,7 @@ npm run dev
 ```
 
 ## Tài liệu đồ án
-- Báo cáo đầy đủ: '/docs/BAOCAO_TTCN.pdf'
+- Báo cáo đầy đủ: `/docs/BAOCAO_TTCN.pdf`
 
 ## Đồ án Phân tích thiết kế hệ thống thông tin
 https://github.com/phanhvo/DoAnPhanTichThietKeHeThongThongTin 

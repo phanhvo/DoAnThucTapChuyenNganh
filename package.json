@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2"
+  },
+  "AllowedHosts": "*",
+  "VietQR": {
+    "BankCode": "VCB",
+    "AccountNumber": "1026468339",
+    "AccountName": "Công ty TNHH khách sạn Phương Anh"
+  }
+}

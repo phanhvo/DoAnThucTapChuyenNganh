@@ -1,0 +1,179 @@
+.hoadon-detail-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 32px 24px 24px 24px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hoadon-detail-container h2 {
+    text-align: center;
+    color: #1b5581;
+    margin-bottom: 24px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.hoadon-detail-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+    table-layout: fixed;
+}
+
+.hoadon-detail-container td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1.05rem;
+}
+
+.hoadon-detail-container td:first-child {
+    width: 45%;              /* cột tiêu đề */
+    color: #555;
+    font-weight: 500;
+    text-align: left;
+}
+
+.hoadon-detail-container td:last-child {
+    width: 55%;              /* cột giá trị */
+    color: #222;
+    font-weight: 600;
+    text-align: right;       /* nhìn gọn, giống hóa đơn */
+    word-wrap: break-word;   /* tránh tràn */
+}
+
+.btn-xem {
+    background: #1b5581;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    margin: 2px auto;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 50%;
+    display: block;
+}
+
+.btn-xem:hover {
+    background: #e6b800;
+    color: #1b5581;
+    transform: scale(1.03);
+}
+.btn-disabled {
+    background: #ccc;
+    color: #666;
+    border: none;
+    padding: 12px;
+    margin: 2px auto;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 60%;
+    display: block;
+    cursor: not-allowed;
+}
+.btn-back, .btn-pay {
+    color: #1b5581;
+    border: none;
+    padding: 12px;
+    margin: 5px auto 2px auto;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 50%;
+    display: block;
+    justify-content: center;
+}
+.btn-back:hover, .btn-pay:hover {
+    font-weight: bold;
+    transform: scale(1.03);
+}
+
+@media (max-width: 1024px) {
+
+  .hoadon-detail-container {
+    max-width: 440px;
+    margin: 30px auto;
+    padding: 26px 20px 20px;
+  }
+
+  .hoadon-detail-container h2 {
+    font-size: 1.45rem;
+    margin-bottom: 20px;
+  }
+
+  .hoadon-detail-container td {
+    font-size: 1rem;
+    padding: 9px 6px;
+  }
+
+  .btn-xem,
+  .btn-back,
+  .btn-pay,
+  .btn-disabled {
+    width: 60%;
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+
+  .hoadon-detail-container {
+    max-width: 100%;
+    margin: 15px 12px;
+    padding: 20px 16px 18px;
+    border-radius: 10px;
+  }
+
+  .hoadon-detail-container h2 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+
+  .hoadon-detail-container table,
+  .hoadon-detail-container tbody,
+  .hoadon-detail-container tr,
+  .hoadon-detail-container td {
+    display: block;
+    width: 100%;
+  }
+
+  .hoadon-detail-container tr {
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .hoadon-detail-container td {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 0.95rem;
+  }
+
+  .hoadon-detail-container td:first-child {
+    width: auto;
+    font-weight: 600;
+    color: #1b5581;
+  }
+
+  .hoadon-detail-container td:last-child {
+    text-align: right;
+  }
+
+  .btn-xem,
+  .btn-back,
+  .btn-pay,
+  .btn-disabled {
+    width: 100%;
+    max-width: 360px;
+    font-size: 15px;
+    padding: 12px;
+  }
+}

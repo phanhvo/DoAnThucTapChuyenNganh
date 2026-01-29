@@ -1,0 +1,217 @@
+/* Reset basics without forcing full-width on every element (which prevented centering) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply font and layout to body only */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f8fc;
+    min-height: 100vh;
+}
+
+/* Center the login card inside the right-side main content (keeps sidebar intact) */
+.app-container .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* ensure the main area fills viewport height for vertical centering */
+    min-height: 100vh;
+    background-image: url('https://i.pinimg.com/736x/48/87/0e/48870e786f7987539b5a56a26795d355.jpg');
+    background-size: cover;       /* hình đầy toàn màn hình */
+    background-repeat: no-repeat; /* không lặp lại hình */
+    background-position: center;  /* căn giữa hình */
+}
+
+.login-container {
+    /* allow the container to shrink on small screens but cap its width */
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 30px;
+    border-radius: 15px;
+    background: #f5f8fc;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; /* allow children (form/inputs) to take full width */
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #1b5581;
+    letter-spacing: 1px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Input group with inline toggle button attached to the right */
+.input-group {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+}
+
+.input-group input {
+    flex: 1;
+    min-height: 44px;
+    padding: 10px 12px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #ccc;
+    border-right: none;
+    margin-bottom: 0; /* keep input height consistent when inside input-group */
+}
+
+.password-toggle {
+    width: 44px;
+    height: 44px;   
+    border-radius: 0 8px 8px 0;
+}
+
+.password-toggle svg { display: block; width: 20px; height: 20px; }
+
+.forgot-password, .register-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #1b5581;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.forgot-password:hover, .register-link:hover {
+    color: #e6b800;
+}
+
+.login-container label {
+    font-weight: 600;
+    color: #333;
+    margin: 6px 0 3px;
+}
+
+.login-container input,
+.login-container select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.login-container input:focus,
+.login-container select:focus {
+    border-color: #1b5581;
+    box-shadow: 0 0 6px rgba(14, 57, 89, 0.3);
+    outline: none;
+}
+
+.btn-submit {
+    background: #1b5581;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #e6b800;
+    color: #1b5581;
+    transform: scale(1.03);
+}
+
+.login-container .bottom-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.login-container .bottom-text a {
+    color: #1b5581;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container .bottom-text a:hover {
+    color: #e6b800;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .app-container .main-content {
+        padding: 40px 20px;
+        align-items: flex-start; /* tránh bị dính sát trên */
+    }
+
+    .login-container {
+        max-width: 420px;
+        margin-top: 60px;
+        padding: 30px 25px;
+    }
+
+    .login-container h2 {
+        font-size: 22px;
+    }
+}
+@media (max-width: 600px) {
+    .app-container .main-content {
+        padding: 20px 12px;
+        justify-content: flex-start;
+        align-items: stretch;
+        background-position: center top;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 12px;
+        padding: 24px 16px;
+        box-shadow: none; /* mobile nhẹ mắt hơn */
+    }
+
+    .login-container h2 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    .login-container input,
+    .login-container select {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-submit {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .forgot-password,
+    .register-link {
+        font-size: 13px;
+    }
+}
+

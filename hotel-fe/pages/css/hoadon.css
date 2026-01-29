@@ -1,0 +1,259 @@
+.hoadon-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.hoadon-container h2 {
+  color: #1b5581;
+  border-bottom: 3px solid #ffd700;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Table base */
+.hoadon-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+.hoadon-table thead {
+  background-color: #1b5581;
+  color: white;
+}
+
+.hoadon-table th,td {
+  padding: 12px 16px;
+}
+
+.hoadon-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
+
+.hoadon-table tbody tr:hover {
+  background-color: #f5f7fa;
+}
+.hoadon-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* th:nth-child(1),
+td:nth-child(1) {
+  width: 13%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 13%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 13%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  width: 13%;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+  width: 10%;
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+  width: 13%;
+}
+
+th:nth-child(7),
+td:nth-child(7) {
+  width: 10%;
+}
+
+th:nth-child(8),
+td:nth-child(8) {
+  width: 13%;
+} */
+
+td:nth-child(6) {
+  color: #1b5581;
+  font-weight: 600;
+}
+
+.btnxemchitiet {
+  background-color: #39719c;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btnxemchitiet:hover {
+  background-color: #d3b436;
+  color: #1b5581;
+  transform: scale(1.05);
+}
+
+/* Detail box similar to room-detail */
+.invoice-detail {
+  margin-top: 20px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.invoice-detail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(2, 6, 23, 0.10);
+}
+
+.invoice-detail h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1b5581;
+  margin-bottom: 14px;
+}
+
+.invoice-detail p {
+  font-size: 0.95rem;
+  color: #374151;
+  margin: 6px 0;
+}
+
+/* Action buttons inside invoice detail */
+.invoice-detail .btn-action {
+  padding: 10px 16px;
+  margin-right: 12px;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.invoice-detail .btn-close {
+  padding: 10px 16px;
+  background: #e5e7eb;
+  color: #374151;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+
+  .hoadon-container {
+    padding: 20px;
+  }
+
+  .hoadon-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .hoadon-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .hoadon-table th,
+  .hoadon-table td {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .btnxemchitiet {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 600px) {
+
+  .hoadon-container {
+    padding: 15px;
+  }
+
+  .hoadon-container h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Ẩn header bảng */
+  .hoadon-table thead {
+    display: none;
+  }
+
+  .hoadon-table,
+  .hoadon-table tbody,
+  .hoadon-table tr,
+  .hoadon-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .hoadon-table tr {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(2,6,23,0.08);
+    padding: 12px;
+    background: #fff;
+  }
+
+  .hoadon-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 0.9rem;
+  }
+
+  .hoadon-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #1b5581;
+  }
+
+  .btnxemchitiet {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  /* Invoice detail */
+  .invoice-detail {
+    padding: 18px;
+  }
+
+  .invoice-detail h3 {
+    font-size: 1.3rem;
+  }
+
+  .invoice-detail p {
+    font-size: 0.9rem;
+  }
+
+  .invoice-detail .btn-action,
+  .invoice-detail .btn-close {
+    width: 100%;
+    margin: 6px 0;
+  }
+}

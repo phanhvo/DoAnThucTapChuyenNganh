@@ -1,0 +1,244 @@
+.danhsachphong {
+  background-color: #ffffff54;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* width: 95%;
+  justify-content: center; */
+  width: 100%;  
+  margin: 0 auto;
+}
+
+.danhsachphong h2 {
+  color: #1b5581;
+  border-bottom: 3px solid #ffd700;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* GRID PHÒNG */
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 30px;
+    justify-content: center;
+    margin: 0 auto;         
+    width: fit-content; 
+}
+
+.room-card {
+    width: 350px;
+    height: 280px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+}
+
+.room-img img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.price {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+/* OVERLAY CHI TIẾT */
+.room-detail-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.room-detail {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 700px;
+}
+
+.detail-content {
+    display: flex;
+    gap: 20px;
+}
+
+.detail-content img {
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.detail-info p {
+    margin: 6px 0;
+}
+
+.button-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-dat {
+    background: #214f89;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-close {
+    background: #ccc;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/* ===== SEARCH BAR ===== */
+.search-bar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+    overflow: visible;
+    justify-content: center;
+}
+
+.search-bar input {
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+.search-bar select {
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+.datepicker-box {
+    position: relative;
+    width: 300px;
+} 
+.react-datepicker-popper {
+    transform: scale(0.9);      /* 0.85 – 0.9 – 0.95 */
+    transform-origin: top left;
+}
+
+.btn-search {
+    background: #214f89;
+    color: white;
+    border: none;
+    padding: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 90px;
+    font-size: 17px;
+}
+@media (max-width: 1024px) {
+
+  .danhsachphong {
+    padding: 25px;
+  }
+
+  .room-grid {
+    grid-template-columns: repeat(2, 320px);
+    gap: 25px;
+    width: 100%;
+  }
+
+  .room-card {
+    width: 320px;
+    height: auto;
+  }
+
+  .search-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .datepicker-box {
+    width: 260px;
+  }
+
+  .btn-search {
+    width: 120px;
+  }
+}
+@media (max-width: 600px) {
+
+  .danhsachphong {
+    padding: 20px 15px;
+  }
+
+  .danhsachphong h2 {
+    font-size: 1.5rem;
+  }
+
+  .room-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .room-card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .room-img img {
+    height: 180px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .datepicker-box {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .btn-search {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  /* Chi tiết phòng */
+  .room-detail {
+    width: 95%;
+    max-width: 380px;
+    padding: 20px;
+  }
+
+  .detail-content {
+    flex-direction: column;
+  }
+
+  .detail-content img {
+    width: 100%;
+    height: 200px;
+  }
+}

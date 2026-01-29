@@ -1,0 +1,177 @@
+/* ===== PAGE ===== */
+.admin-room {
+    padding: 24px;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== TOOLBAR ===== */
+.toolbar {
+    display: flex;
+    /* justify-content: space-between;
+    align-items: center; */
+    margin-bottom: 20px;
+}
+
+.btn-add {
+    background: #1b5581;
+    color: #fff;
+    border: none;
+    width: 350px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.btn-add:hover {
+    background: #e6b800;
+    color: #1b5581;
+    transform: scale(1.03);
+}
+
+/* ===== FORM ===== */
+.room-form {
+    background: #ffffffcc;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 0 auto 30px auto;
+}
+
+.room-form h3 {
+    margin-bottom: 16px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.room-form input,
+.room-form select,
+.room-form textarea {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.room-form textarea {
+    margin-top: 12px;
+    width: 100%;
+    min-height: 80px;
+}
+
+.form-actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-save {
+    background: #1b5581c4;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+}
+
+.btn-cancel {
+    background: #9e9e9e;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+}
+.btn-save:hover, .btn-cancel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37,99,235,0.18);
+}
+
+/* ===== TABLE ===== */
+.room-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffffcc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.room-table th {
+    background: #eeeeee;
+    padding: 12px;
+    text-align: left;
+}
+
+.room-table td {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* ===== CHIA CHIỀU RỘNG CỘT ===== */
+.room-table th:nth-child(1),
+.room-table td:nth-child(1) {
+    width: 15%;
+    padding-left: 20px;
+}
+
+.room-table th:nth-child(2),
+.room-table td:nth-child(2) {
+    width: 15%;
+}
+
+.room-table th:nth-child(3),
+.room-table td:nth-child(3) {
+    width: 15%;
+    text-align: right;
+    font-weight: 600;
+}
+
+.room-table th:nth-child(4),
+.room-table td:nth-child(4) {
+    width: 15%;
+    text-align: center;
+}
+
+.room-table th:nth-child(5),
+.room-table td:nth-child(5) {
+    width: 15%;
+    text-align: center;
+}
+
+.room-table th:nth-child(6),
+.room-table td:nth-child(6) {
+    width: 15%;
+    text-align: center;
+}
+
+/* ===== ACTION GROUP ===== */
+.action-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+/* icon button */
+.btn-action {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn-action:hover {
+    background: rgba(0,0,0,0.08);
+    transform: scale(1.15);
+}
